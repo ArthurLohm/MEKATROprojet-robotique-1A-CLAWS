@@ -1,0 +1,52 @@
+{
+    "rob":{
+        "dimension":{
+            "l4":10
+        },
+        "Pince":{
+            "0":100,
+            "1":40,
+            "2":20
+
+        },
+        "Formes":{
+            "Rond":{
+                "1": [
+                    [0,0,0,0,0],
+                    [1,1,1,1,1]
+                ],
+                "2": false,
+                "3": false
+
+            },
+            "Carre":{
+                "1": false,
+                "2": false,
+                "3": false
+
+            },
+            "Etoile":{
+                "1": false,
+                "2": false,
+                "3": false
+
+            },
+        "Tour":{
+               
+        }
+        }
+    },
+    "Interface":{
+        "global":{
+            "geo":"1000x700",
+            "nom":"Commandes CLAWS"
+                
+        },
+        "Font":{
+            "Titre2":["Arial", 24],
+            "Texte":["Arial", 14],
+            "Titre1":["Arial",30],
+            "Console":["Consolas", 15]
+        }
+    }
+}
