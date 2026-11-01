@@ -43,6 +43,9 @@ def MGI(pos):
     #MGI du robot renvoie la position articulaire à partir de la position opérationnel pos
     x,y,z,theta,P = pos
     l4 = config["rob"]["dimension"]["l4"]
+    x += config["rob"]["corrections"]["xCorr"]
+    y += config["rob"]["corrections"]["yCorr"]
+    z += config["rob"]["corrections"]["zCorr"]
 
     gamma = config["rob"]["Pince"][str(P)] # On récupère l'angle du moteur pour l'ouverture de la pince
 
@@ -106,8 +109,18 @@ FrameDroite.pack(pady=0, padx=2, fill="both", expand=True,side ="right")
 #On ajoute un Titre
 TitreGauche = ctk.CTkLabel(FrameGauche,text="Commandes disponibles",font=tuple(config["Interface"]["Font"]["Titre2"]))
 TitreGauche.pack(pady=5)
+#Ajout du bouton de connexion
+CConn = ctk.CTkFrame(FrameGauche,fg_color="transparent")
+CConn.pack(pady=0, padx=0, fill="x", expand=True,side="top")
+#Ajout du bouton de connexion
+BConnexion = ctk.CTkButton(CConn,text="Connexion",command=lambda:ajouter_log("Connexion..."))
+BConnexion.pack(pady=10,side="left")
+Infoconnexion = ctk.CTkLabel(CConn,text="Non connecté",font=tuple(config["Interface"]["Font"]["Texte"]))
+Infoconnexion.pack(pady=5,padx = 3,side="left")
 
-
+#Ajout du bouton d'arrêt d'urgence
+BArret = ctk.CTkButton(CConn,text="Arrêt d'urgence",command=lambda:ajouter_log("STOP"))
+BArret.pack(pady=10,side="right")
 #Pour la commande de Combat de tours
 CCombat = ctk.CTkFrame(FrameGauche)
 CCombat.pack(pady=1, padx=0, fill="x", expand=True,side="bottom")

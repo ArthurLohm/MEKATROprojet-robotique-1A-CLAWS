@@ -3,6 +3,11 @@
         "dimension":{
             "l4":10
         },
+        "corrections":{
+            "xCorr":0,
+            "yCorr":0,
+            "zCorr":0
+        },
         "Pince":{
             "0":100,
             "1":40,
@@ -46,7 +51,7 @@
             "Titre2":["Arial", 24],
             "Texte":["Arial", 14],
             "Titre1":["Arial",30],
-            "Console":["Consolas", 15]
+            "Console":["Consolas", 12]
         }
     }
 }
